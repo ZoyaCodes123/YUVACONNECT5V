@@ -1,0 +1,135 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="YuvaConnect.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        *{
+            
+    font-family: Arial, sans-serif;
+        }
+    .navbar{
+         margin-left:150px !important;
+         padding:10px !important;
+         margin-bottom:20px !important;
+         box-shadow: black 2px 2px 2px;
+    } 
+    #ProfileImage{
+        height:50px;
+        width:50px;
+        border-radius:50%;
+        margin-right:10px;
+    }
+    #Name{ 
+        color:#8B0000;
+        font-weight:bold;
+        font-size:30px;
+        }
+    .sidebar {
+    margin-top:0px;
+    width: 150px;
+    height: 100vh;
+   //Background-color: #2a2a72;
+   background-color:#8B0000 ;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-left: 4px solid transparent;
+    transition: all 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #561d1d;
+    border-left: 4px solid #ffc107;
+}
+.sidebar ul li:active {
+    background-color: #1d1d56;
+    border-left: 4px solid #ffc107;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+} 
+
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body> 
+    <form runat="server">  
+    <div class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <asp:Image ID="ProfileImage" runat="server" CssClass="profile-pic" ImageUrl="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg" /> 
+        <asp:Label ID="Name" runat="server"></asp:Label>,
+        <asp:Label ID="College" runat="server"></asp:Label>
+    </ul>
+</div>
+
+<div class="sidebar">
+    <div class="logo">
+        <h2>YC</h2>
+    </div>
+    <ul>
+        <li id="liProfileStud" runat="server"><i class="fas fa-user"></i><a href="/UPDATE_STUD.aspx">Your Profile</a></li>
+        <li id="liProfileAlum" runat="server"><i class="fas fa-user"></i><a href="/UPDATE_ALUM.aspx">Your Profile</a></li>
+        <li id="liProfileAdm" runat="server"><i class="fas fa-user"></i><a href="/UPDATE_ADM.aspx">Your Profile</a></li>
+        <li id="liAlumniList" runat="server"><i class="fas fa-user-graduate"></i><a href="/ALUMNI_LIST.aspx">Alumni List</a></li>
+        <li id="liAlumni" runat="server"><i class="fas fa-user-graduate"></i><a href="/ALUMNI.aspx">Alumni</a></li>
+        <li id="liStudentList" runat="server"><i class="fas fa-cogs"></i><a href="/STUDENT_LIST.aspx">Student List</a></li>
+        <li id="liStudent" runat="server"><i class="fas fa-cogs"></i><a href="/STUDENT.aspx">Student</a></li>
+        <li id="liEvents" runat="server"><i class="fas fa-book"></i><a href="/EVENTS.aspx">Events</a></li>
+        <li id="liStudentRequests" runat="server"><i class="fas fa-tasks"></i><a href="/STUDENT_REQ.aspx">Student Requests</a></li>
+        <li id="liAlumniRequests" runat="server"><i class="fas fa-tasks"></i><a href="/ALUMNI_REQ.aspx">Alumni Requests</a></li> 
+        <li id="liVoteAdmin" runat="server"><i class="fas fa-check-square"></i><a href="/VOTE_ADMIN.aspx">Vote</a></li>
+        <li id="liVoteAlumni" runat="server"><i class="fas fa-check-square"></i><a href="/VOTE_ALUMNI.aspx">Vote</a></li>
+        <li id="liVoteStudent" runat="server"><i class="fas fa-check-square"></i><a href="/VOTE_STUD.aspx">Vote</a></li>
+
+        <li id="liReport" runat="server"><i class="fa-regular fa-flag"></i><a href="/REPORT.aspx">Report</a></li>
+        <li id="liLogout" runat="server"><i class="fas fa-sign-out-alt"></i>
+            <asp:LinkButton ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" CssClass="logout-link" />
+        </li>
+
+    </ul>
+</div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>  
+        </form>
+</body>
+</html>

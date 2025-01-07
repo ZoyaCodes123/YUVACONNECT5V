@@ -1,0 +1,284 @@
+﻿* {
+    font-family: poppins;
+}
+/* outernav */
+.navbar {
+    background-color: #8B0000 !important;
+    height: 80px;
+    width: 100%;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+    margin-left: 20px;
+    border-radius: 50%;
+    border: 2px black solid;
+    box-shadow: 0px 0px 10px 5px rgba(219, 214, 214, 0.25);
+}
+/* innernav */
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    color: #F5F5DC !important;
+    font-weight: lighter !important;
+    font-size: 23px;
+    letter-spacing: 1.6px; 
+}
+
+    .nav-link:hover {
+        color: #fff !important;
+        font-size: 25.5px;
+        text-decoration: underline;
+        box-shadow: #8B0000;
+    }
+     
+
+/* main */
+
+.main {
+    height: 100%;
+    width: 100vw;
+    background-color: #F5F5DC;
+}
+
+video {
+    width: 100vw;
+    height: 500px; /* Crop from the top, right, bottom, left */
+}
+
+.curve {
+    height: 900px;
+    width: 100%;
+    background-color: #8B0000;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    clip-path: ellipse(150% 100% at 50% 0%);
+    /* position: relative; */
+}
+
+    /* heading in curve  */
+    .curve .our-services h1 {
+        font-size: 60px;
+        color: #F5F5DC;
+        display: inline-flex;
+        margin-top: 20px;
+    }
+
+    /* content in curve  */
+    .curve .content {
+        height: 500px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        /* justify-items:flex-start; */
+        align-content: space-evenly;
+        /* align-items:flex-start; */
+        flex-wrap: wrap;
+    }
+
+/* 2 services in content in curve  */
+.services {
+    /* margin: 10px; */
+    background-color: #F5F5DC;
+    height: 650px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: center;
+    margin-top: 30px;
+}
+
+    .services .service-heading {
+        color: #8B0000;
+        font-size: 25px;
+        margin-top: 10px;
+        /* background-color: palevioletred; */
+    }
+
+    .services .service-info {
+        height: 80px;
+        width: 450px;
+        /* background-color: pink; */
+        padding: 2px;
+        border: 1px solid #8B0000;
+        margin: 10px;
+        text-align: center;
+        border-radius: 20px;
+    }
+
+
+.about_us {
+    height: 300px;
+    width: 80%;
+    margin-left: 10vw;
+    background-color: transparent;
+    z-index: 10;
+    position: relative;
+    border-radius: 20px;
+}
+
+    .about_us h1 {
+        z-index: 9;
+        color: #8B0000;
+        text-align: center;
+        font-size: 50px;
+        margin-top: 20px;
+        padding-top: 20px;
+        text-decoration: underline;
+    }
+
+    .about_us p {
+        text-align: center;
+        color: #8B0000;
+        font-size: large;
+        margin-top: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+/* events */
+
+#event {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center
+}
+
+.intro {
+    height: 550px;
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 10vw;
+    /* background-color: #DCDCDC;
+     */
+    border: 1px solid #8B0000;
+    z-index: 10;
+    border-radius: 20px;
+}
+
+    .intro h1 {
+        color: #8B0000;
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 20px;
+        text-decoration: underline;
+    }
+
+.event {
+    position: relative;
+    height: 400px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+}
+
+    .event img {
+        height: 200px;
+        width: 200px;
+        background-size: cover;
+        margin-top: 10px
+    }
+
+    .event p {
+        height: 100px;
+        width: 200px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .event h4 {
+        color: #8B0000;
+        margin-top: 10px;
+        text-align: left;
+    }
+
+#event .card {
+    background-color: #F5F5DC !important;
+}
+
+    #event .card:hover {
+        box-shadow: 5px 5px 8px #8B0000;
+    }
+
+/* colleges */
+.colleges {
+    height: 700px;
+    width: 100%;
+    /* background-color: #8B0000; */
+    border: 1px solid #8B0000;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    /* align-content: space-between;
+    justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+    .colleges .college_heading h1 {
+        margin-left: 300px;
+        margin-top: 20px;
+        text-align: center;
+        color: #8B0000;
+        height: 70px;
+        width: 100%;
+        /* background-color: red; */
+    }
+
+    .colleges .college_logo {
+        height: 660px;
+        width: 80%;
+        margin-left: 150px;
+        margin-top: -50px;
+        /* background-color: black; */
+        /* opacity: 0.5; */
+        mix-blend-mode: multiply;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: center;
+        align-content: space-evenly;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+.clg_logo {
+    margin: 30px;
+}
+
+    .clg_logo img {
+        height: 130px;
+        width: 130px;
+    }
+
+/* footer */
+.card {
+    background-color: #8B0000 !important;
+}
+
+footer .card {
+    height: 250px !important;
+    color: #F5F5DC !important;
+    border-radius: 0;
+}
